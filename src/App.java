@@ -1,12 +1,28 @@
+import java.util.Scanner;
+
 public class App {
+    public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
-        System.out.println("Prj_GRUPO4");
+        System.out.println("GRUPO NRO4");
+        System.out.println("Integrantes: ");
+        System.out.println("1. Sebastian Oña");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+
+        System.out.println("-> Figuras:");
         System.out.println();
 
-        OnaSebastian oS = new OnaSebastian( '*' , 5, '*', '+', 5);
+        OnaSebastian soFiguras;
+        soFiguras = new OnaSebastian();
+        soFiguras.setSoTamano(5);
+        soFiguras.setSoSimbolo1("+");
+        soFiguras.setSoSimbolo2("-");
+        soFiguras.setSoSimbolo3("*");
 
-
-        System.out.println(oS.getOSF1());
-        System.out.println(oS.getOSF2());
+            soFiguras.soF1(soFiguras.getSoTamano(),soFiguras.getSoSimbolo1());
+            soFiguras.soF2(soFiguras.getSoTamano(),soFiguras.getSoSimbolo1(), soFiguras.getSoSimbolo2());
+            soFiguras.soF3(soFiguras.getSoTamano(), soFiguras.getSoSimbolo1());
+            soFiguras.soF4(soFiguras.getSoTamano(),soFiguras.getSoSimbolo1());
     }
 }
