@@ -97,7 +97,7 @@ public class OnaSebastian {
 
 
     public void soF5(int SoTamano, String soSimbolo3){
-        System.out.println("Figura NR6: ");
+        System.out.println("Figura NR5: ");
         System.out.println();
         for (int i = soTamano; i > 0; i--) {
             if (i%2==0) {
@@ -114,14 +114,47 @@ public class OnaSebastian {
             }
         }
     }
-    
+
     public void soF6(int soTamano, String soSimbolo1){
-        System.out.println("Figura NRO5: ");
         System.out.println();
-        for (int i = 0; i < soTamano; i++) {
-            for (int j = 0; j < soTamano; j++) {
-                System.out.print("");
+        System.out.println("Figura NRO6: ");
+        System.out.println();
+        for (int i = soTamano; i >= 0; i--) {
+            if (i%2!=0) {
+                for (int j = i-1; j > 0; j--) {
+                    System.out.print(j%2==0?   " " : "");
+                } 
+            }
+            else{
+                for (int j = i; j < soTamano ; j++) {
+                    System.out.print(soSimbolo1);
+            }
+            System.out.println();
             }
         }
     }
+
+    public void soF7(int soTamano, String soSimbolo2){ 
+        System.out.println();
+        System.out.println("Figura NRO7: ");
+        System.out.println();
+        int i = 0;
+        while (i < soTamano) {
+            if (i%2==0) {
+                for (int j = 0; j < i; j++){
+                    System.out.print("  ");
+                } 
+                    System.out.print(soSimbolo2+soSimbolo2+soSimbolo2);
+            }
+            else{
+                for(int j = 1; j <= i; j++){
+                    System.out.print(j%2!=0? "   ":" ");    
+                }
+                System.out.print("|");
+            }
+                System.out.println();
+            i++;
+        } 
+    }
+
 }
