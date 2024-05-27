@@ -152,9 +152,32 @@ public class OnaSebastian {
                 }
                 System.out.print("|");
             }
-                System.out.println();
+            System.out.println();
             i++;
         } 
+    }
+
+    public void soF8(int soTamano, String soSimbolo2){
+        System.out.println();
+        System.out.println("Figura NRO8: ");
+        System.out.println();
+        int i = 0;
+        while (i < soTamano) {
+            if (i%2==0) {
+                for (int j = soTamano; j > i; j--) {
+                    System.out.print("  ");
+                }
+                System.out.print(soSimbolo2+soSimbolo2+soSimbolo2);
+            }
+            else{
+                for(int j = i; j < soTamano; j++){
+                    System.out.print(j%2==0? "   ":" ");
+                }
+                System.out.print(" |");
+            }
+            System.out.println();
+            i++;
+        }
     }
 
 }
