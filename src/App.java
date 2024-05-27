@@ -24,5 +24,6 @@ public class App {
             soFiguras.soF2(soFiguras.getSoTamano(),soFiguras.getSoSimbolo1(), soFiguras.getSoSimbolo2());
             soFiguras.soF3(soFiguras.getSoTamano(), soFiguras.getSoSimbolo1());
             soFiguras.soF4(soFiguras.getSoTamano(),soFiguras.getSoSimbolo1());
+            soFiguras.soF5(soFiguras.getSoTamano(),soFiguras.getSoSimbolo3());
     }
 }

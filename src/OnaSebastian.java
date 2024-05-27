@@ -95,7 +95,27 @@ public class OnaSebastian {
         System.out.println();
     }
 
-    public void soF5(int soTamano, String soSimbolo1){
+
+    public void soF5(int SoTamano, String soSimbolo3){
+        System.out.println("Figura NR6: ");
+        System.out.println();
+        for (int i = soTamano; i > 0; i--) {
+            if (i%2==0) {
+                for (int j = 0;j < soTamano-i; j++) {
+                    System.out.print(j%2==0?  " " : "");
+
+                }
+            }
+            else{
+                for (int j = i;j > 0; j--) {
+                    System.out.print(soSimbolo3);
+                }
+                System.out.println();
+            }
+        }
+    }
+    
+    public void soF6(int soTamano, String soSimbolo1){
         System.out.println("Figura NRO5: ");
         System.out.println();
         for (int i = 0; i < soTamano; i++) {
