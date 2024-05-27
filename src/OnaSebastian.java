@@ -99,19 +99,16 @@ public class OnaSebastian {
     public void soF5(int SoTamano, String soSimbolo3){
         System.out.println("Figura NR5: ");
         System.out.println();
-        for (int i = soTamano; i > 0; i--) {
-            if (i%2==0) {
-                for (int j = 0;j < soTamano-i; j++) {
-                    System.out.print(j%2==0?  " " : "");
-
-                }
+        int i = soTamano;
+        while (i > 0) {
+            for (int j = soTamano; j > i; j--) {
+                System.out.print(" ");
             }
-            else{
-                for (int j = i;j > 0; j--) {
-                    System.out.print(soSimbolo3);
-                }
-                System.out.println();
+            for (int k = 0; k < 2*i-1; k++) {
+                System.out.print(soSimbolo3);
             }
+            System.out.println();
+            i--;
         }
     }
 
@@ -119,18 +116,16 @@ public class OnaSebastian {
         System.out.println();
         System.out.println("Figura NRO6: ");
         System.out.println();
-        for (int i = soTamano; i >= 0; i--) {
-            if (i%2!=0) {
-                for (int j = i-1; j > 0; j--) {
-                    System.out.print(j%2==0?   " " : "");
-                } 
+        int i = 1;
+        while (i <= soTamano) {
+            for(int j = 1; j <= soTamano-i; j++){
+                System.out.print(" ");
             }
-            else{
-                for (int j = i; j < soTamano ; j++) {
-                    System.out.print(soSimbolo1);
+            for(int k = 1; k <= 2*i-1; k++){
+                System.out.print(soSimbolo1);
             }
             System.out.println();
-            }
+            i++;
         }
     }
 
