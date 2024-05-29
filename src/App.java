@@ -14,6 +14,7 @@ public class App {
         System.out.println();
 
         OnaSebastian soFiguras;
+        
         soFiguras = new OnaSebastian();
         soFiguras.setSoTamano(7);
         soFiguras.setSoSimbolo1("+");
@@ -28,5 +29,6 @@ public class App {
             soFiguras.soF6(soFiguras.getSoTamano(), soFiguras.getSoSimbolo1());
             soFiguras.soF7(soFiguras.getSoTamano(), soFiguras.getSoSimbolo2());
             soFiguras.soF8(soFiguras.getSoTamano(), soFiguras.getSoSimbolo2());
+ 
     }
 }

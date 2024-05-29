@@ -4,6 +4,13 @@ public class OnaSebastian {
     private String soSimbolo2;
     private String soSimbolo3;
 
+    public OnaSebastian(){
+        soTamano = 0;
+        soSimbolo1 = "*";
+        soSimbolo2 = "-";
+        soSimbolo3 = "+";
+    }
+
     public int getSoTamano() {
         return soTamano;
     }
@@ -29,7 +36,7 @@ public class OnaSebastian {
         this.soSimbolo3 = soSimbolo3;
     }
 
-    public void soF1(int SoTamano, String soSimbolo1){
+    public void soF1(int soTamano, String soSimbolo1){
         System.out.println("Figura NR1: ");
         System.out.println();
         for(int i = 0; i < soTamano; i++){
