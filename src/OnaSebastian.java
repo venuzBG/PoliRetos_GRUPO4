@@ -2,13 +2,12 @@ public class OnaSebastian {
     private int soTamano;
     private String soSimbolo1;
     private String soSimbolo2;
-    private String soSimbolo3;
+    
 
     public OnaSebastian(){
         soTamano = 0;
         soSimbolo1 = "*";
         soSimbolo2 = "-";
-        soSimbolo3 = "+";
     }
 
     public int getSoTamano() {
@@ -29,12 +28,8 @@ public class OnaSebastian {
     public void setSoSimbolo2(String soSimbolo2) {
         this.soSimbolo2 = soSimbolo2;
     }
-    public String getSoSimbolo3() {
-        return soSimbolo3;
-    }
-    public void setSoSimbolo3(String soSimbolo3) {
-        this.soSimbolo3 = soSimbolo3;
-    }
+
+    
 
     public void soF1(int soTamano, String soSimbolo1){
         System.out.println("Figura NR1: ");
@@ -103,7 +98,7 @@ public class OnaSebastian {
     }
 
 
-    public void soF5(int SoTamano, String soSimbolo3){
+    public void soF5(int SoTamano, String soSimbolo1){
         System.out.println("Figura NR5: ");
         System.out.println();
         int i = soTamano;
@@ -112,7 +107,7 @@ public class OnaSebastian {
                 System.out.print(" ");
             }
             for (int k = 0; k < 2*i-1; k++) {
-                System.out.print(soSimbolo3);
+                System.out.print(soSimbolo1);
             }
             System.out.println();
             i--;
@@ -136,7 +131,7 @@ public class OnaSebastian {
         }
     }
 
-    public void soF7(int soTamano, String soSimbolo2){ 
+    public void soF7(int soTamano, String soSimbolo1){ 
         System.out.println();
         System.out.println("Figura NRO7: ");
         System.out.println();
@@ -146,7 +141,7 @@ public class OnaSebastian {
                 for (int j = 0; j < i; j++){
                     System.out.print("  ");
                 } 
-                    System.out.print(soSimbolo2+soSimbolo2+soSimbolo2);
+                    System.out.print(soSimbolo1+soSimbolo1+soSimbolo1);
             }
             else{
                 for(int j = 1; j <= i; j++){
@@ -159,7 +154,7 @@ public class OnaSebastian {
         } 
     }
 
-    public void soF8(int soTamano, String soSimbolo2){
+    public void soF8(int soTamano, String soSimbolo1){
         System.out.println();
         System.out.println("Figura NRO8: ");
         System.out.println();
@@ -169,7 +164,7 @@ public class OnaSebastian {
                 for (int j = soTamano; j > i; j--) {
                     System.out.print("  ");
                 }
-                System.out.print(soSimbolo2+soSimbolo2+soSimbolo2);
+                System.out.print(soSimbolo1+soSimbolo1+soSimbolo1);
             }
             else{
                 for(int j = i; j < soTamano; j++){
