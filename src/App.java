@@ -10,25 +10,41 @@ public class App {
         System.out.println("1. Sebastian Oña");
         System.out.println("2. Richard Tipantiza");
         System.out.println("3. Carlos Troya");
-        System.out.println("");
+        System.out.println("4. Rommel Rivera");
         
         System.out.println();
         
         
-        OnaSebastian soFiguras;
-        TipantizaRichard trCaracteres;
-        TroyaCarlos ctFormas;
+        
+        OnaSebastian      soFiguras;
+        TipantizaRichard  trCaracteres;
+        TroyaCarlos       ctFormas;
+        RommelRivera      rmSeries;
         
         trCaracteres = new TipantizaRichard();
         soFiguras    = new OnaSebastian();
         ctFormas     = new TroyaCarlos();
+        rmSeries     = new RommelRivera();
 
         
         int tamano = obtenerTamano();
         String simbolo = obtenerSimbolo();
-        
-        
+
+        System.out.println("-> Series Numericas:");
+        System.out.println();
+        //serie numeriacas 1-8
+        rmSeries.setRmRepeticiones(tamano);
+            rmSeries.rrSN1(rmSeries.getRmRepeticiones());
+            rmSeries.rrSN2(rmSeries.getRmRepeticiones());
+            rmSeries.rrSN3(rmSeries.getRmRepeticiones());
+            rmSeries.rrSN4(rmSeries.getRmRepeticiones());
+            rmSeries.rrSN5(rmSeries.getRmRepeticiones());
+            rmSeries.rrSN6(rmSeries.getRmRepeticiones());
+            rmSeries.rrSN7(rmSeries.getRmRepeticiones());
+            rmSeries.rrSN8(rmSeries.getRmRepeticiones());
+                
         System.out.println("-> Series Caracteres :");
+        System.out.println();
         //caracteres 1-8
         trCaracteres.setSize(tamano);
         
@@ -45,6 +61,7 @@ public class App {
             System.out.println();
 
         System.out.println("-> Figuras:");
+        System.out.println();
         //figuras 1-8
         soFiguras.setSoTamano(tamano);
         soFiguras.setSoSimbolo1(simbolo);
@@ -101,3 +118,4 @@ public class App {
     }
 
 }
+

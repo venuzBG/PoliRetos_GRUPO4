@@ -1,5 +1,5 @@
 public class OnaSebastian {
-    private int soTamano;
+    private int    soTamano;
     private String soSimbolo1;
     private String soSimbolo2;
     
