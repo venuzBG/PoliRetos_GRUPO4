@@ -20,11 +20,13 @@ public class App {
         TipantizaRichard  trCaracteres;
         TroyaCarlos       ctFormas;
         RommelRivera      rmSeries;
+        VallejoAlexis     vaFig;
         
         trCaracteres = new TipantizaRichard();
         soFiguras    = new OnaSebastian();
         ctFormas     = new TroyaCarlos();
         rmSeries     = new RommelRivera();
+        vaFig        = new VallejoAlexis();
 
         
         int tamano = obtenerTamano();
@@ -86,6 +88,10 @@ public class App {
             ctFormas.ctF14(ctFormas.getCtTamanio());
             ctFormas.ctF15(ctFormas.getCtTamanio());
             ctFormas.ctF16(ctFormas.getCtTamanio());
+
+        //figura17 vaFig
+            vaFig.avF17();
+
     }
 
     private static int obtenerTamano() {
