@@ -47,10 +47,10 @@ public class VallejoAlexis {
         }
     }
 
-    public void avF17(){
+    public void avF17(int vaFig){
         System.out.println("F17: ");
         System.out.println();
-        int n = 5; 
+        int n = vaFig; 
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {

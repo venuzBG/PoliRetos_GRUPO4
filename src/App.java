@@ -44,6 +44,11 @@ public class App {
             rmSeries.rrSN6(rmSeries.getRmRepeticiones());
             rmSeries.rrSN7(rmSeries.getRmRepeticiones());
             rmSeries.rrSN8(rmSeries.getRmRepeticiones());
+
+        //serie numerica 9-12
+            vaFig.avSN9();
+            vaFig.avSN10();
+            vaFig.avSN12();
                 
         System.out.println("-> Series Caracteres :");
         System.out.println();
@@ -90,7 +95,8 @@ public class App {
             ctFormas.ctF16(ctFormas.getCtTamanio());
 
         //figura17 vaFig
-            vaFig.avF17();
+        vaFig.setVaNivel(tamano);
+            vaFig.avF17(vaFig.getVaNivel());
 
     }
 
