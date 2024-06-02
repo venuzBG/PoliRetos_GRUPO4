@@ -32,7 +32,7 @@ public class OnaSebastian {
     
 
     public void soF1(int soTamano, String soSimbolo1){
-        System.out.println("Figura NR1: ");
+        System.out.println("F1: ");
         System.out.println();
         for(int i = 0; i < soTamano; i++){
             if(i == 0 || i == soTamano-1){
@@ -50,7 +50,7 @@ public class OnaSebastian {
     }
 
     public void soF2(int soTamano, String soSimbolo1, String soSimbolo2){
-        System.out.println("Figura NR2: ");
+        System.out.println("F2: ");
         System.out.println();
         for(int i = 0; i < soTamano; i++){
             if(i == 0 || i == soTamano-1){
@@ -72,7 +72,7 @@ public class OnaSebastian {
     }
 
     public void soF3(int soTamano, String soSimbolo1){
-        System.out.println("Figura NR3: ");
+        System.out.println("F3: ");
         System.out.println();
         int i = 0;
         while (i < soTamano) {
@@ -86,7 +86,7 @@ public class OnaSebastian {
 
     public void soF4(int soTamano, String soSimbolo1){
         System.out.println();
-        System.out.println("Figura NR4: ");
+        System.out.println("F4: ");
         System.out.println();
         for (int i = soTamano; i > 0; i--) {
             for (int j = 0; j <= soTamano; j++) {
@@ -99,7 +99,7 @@ public class OnaSebastian {
 
 
     public void soF5(int SoTamano, String soSimbolo1){
-        System.out.println("Figura NR5: ");
+        System.out.println("F5: ");
         System.out.println();
         int i = soTamano;
         while (i > 0) {
@@ -116,7 +116,7 @@ public class OnaSebastian {
 
     public void soF6(int soTamano, String soSimbolo1){
         System.out.println();
-        System.out.println("Figura NRO6: ");
+        System.out.println("F6: ");
         System.out.println();
         int i = 1;
         while (i <= soTamano) {
@@ -133,7 +133,7 @@ public class OnaSebastian {
 
     public void soF7(int soTamano, String soSimbolo1){ 
         System.out.println();
-        System.out.println("Figura NRO7: ");
+        System.out.println("F7: ");
         System.out.println();
         int i = 0;
         while (i < soTamano) {
@@ -156,7 +156,7 @@ public class OnaSebastian {
 
     public void soF8(int soTamano, String soSimbolo1){
         System.out.println();
-        System.out.println("Figura NRO8: ");
+        System.out.println("F8: ");
         System.out.println();
         int i = 0;
         while (i < soTamano) {
