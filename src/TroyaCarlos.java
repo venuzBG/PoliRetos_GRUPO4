@@ -71,7 +71,7 @@ public class TroyaCarlos {
      * Este metodo rotula la figura F16 que es una X que se dibuja entre caracteres + y -, alternando entre ellos.
      * @param ctTamanio: Es el parametro int que da el tamaño a la figura.
      */
-    public void ctF16(int ctTamanio) {
+    public void ctF16(int ctTamanio, Character ctChar) {
         char ctSimbolo;
         System.out.println("");
         System.out.println("F16:");
@@ -79,7 +79,7 @@ public class TroyaCarlos {
         
         for (int i = 0; i < ctTamanio; i++) {
             if (i % 2 == 0) {
-                ctSimbolo = '+';
+                ctSimbolo = ctChar;
             } else {
                 ctSimbolo = '-';
             }
@@ -214,7 +214,7 @@ public class TroyaCarlos {
      * @param ctTamanio: es el tamanio entero o numero de niveles que se desea ver en la escalera.
      * @param ctChar: es el caracter con el que se puede personalizar los escalones de la escalera.
      */
-    public void ctF11(int ctTamanio, char ctChar) {
+    public void ctF11(int ctTamanio, Character ctChar) {
         String piso = "";
         String espaciado = "";
         System.out.println("");

@@ -11,9 +11,11 @@ public class RommelRivera {
 
     public void rrSN1(int rmRepeticiones){
         System.out.println("Sn1: ");
+        System.out.println();
         for (int i = 0; i < rmRepeticiones; i++) {
             System.out.print(" " + fibonacci(i));
         }
+        System.out.println();
     }
         public static int fibonacci(int rmRepeticiones) {
             //caso base

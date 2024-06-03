@@ -1,6 +1,14 @@
 public class TipantizaRichard {
     private int size;
-    
+    private Character trChar;
+
+    public Character getTrChar() {
+        return trChar;
+    }
+
+    public void setTrChar(Character trChar) {
+        this.trChar = trChar;
+    }
 
     public int getSize() {
         return size;
@@ -13,11 +21,11 @@ public class TipantizaRichard {
 
     
     // metodo : + - + - + - + - ...
-    public void trSC1(int size) {
+    public void trSC1(int size, Character trChar) {
         System.out.println("");
         System.out.println("SC 1:");
         System.out.println();
-        char caracter1 = '+';
+        char caracter1 = trChar;
         char caracter2 = '-';
         for (int i = 1; i <= size; i++) {
             System.out.print((i % 2 == 0) ? caracter2 : caracter1);
@@ -27,11 +35,11 @@ public class TipantizaRichard {
     }
 
     //  + + ++ +++ +++++ ++++++++ +++++++++++++ ...
-    public void trSC2(int size) {
+    public void trSC2(int size, Character trChar) {
         System.out.println("");
         System.out.println("SC 2:");
         System.out.println();
-        char caracter1 = '+';
+        char caracter1 = trChar;
         int f1 = 0;
         int f2 = 1;
         int fb;
@@ -51,11 +59,11 @@ public class TipantizaRichard {
     }
 
     // ++ +++ +++++ +++++++ +++++++++++
-    public void trSC3(int size) {
+    public void trSC3(int size, Character trChar) {
         System.out.println("");
         System.out.println("SC 3:");
         System.out.println();
-        char caracter1 = '+';
+        char caracter1 = trChar;
         for (int i = 2; i <= size; i++) {
             if (esPrimo(i)) {
                 System.out.print(repeat(Character.toString(caracter1), i) + " ");
@@ -65,11 +73,11 @@ public class TipantizaRichard {
     }
 
     // + - * / + - * / + - * / ...
-    public void trSC4(int size) {
+    public void trSC4(int size, Character trChar) {
         System.out.println("");
         System.out.println();
         System.out.println("SC 4:");
-        char[] caracteres = {'+', '-', '*', '/'};
+        char[] caracteres = {trChar, '-', '*', '/'};
         for (int i = 0; i < size * 4; i++) {
             System.out.print(caracteres[i % 4] + " ");
         }
@@ -99,11 +107,11 @@ public class TipantizaRichard {
     }
 
     // a + c - e + g ...
-    public void trSC7(int size) {
+    public void trSC7(int size, Character trChar) {
         System.out.println("");
         System.out.println("SC 7:");
         System.out.println();
-        char caracter1 = '+';
+        char caracter1 = trChar;
         char caracter2 = '-';
         if (size > 14) {
             System.out.println("Se acabó el abecedario crack!!");

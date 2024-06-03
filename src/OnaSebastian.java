@@ -1,12 +1,19 @@
 public class OnaSebastian {
-    private int    soTamano;
-    private String soSimbolo1;
-    private String soSimbolo2;
+    private int       soTamano;
+    private Character soSimbolo1;
+    private String    soSimbolo2;
     
+    
+    public Character getSoSimbolo1() {
+        return soSimbolo1;
+    }
 
+    public void setSoSimbolo1(Character soSimbolo1) {
+        this.soSimbolo1 = soSimbolo1;
+    }
     public OnaSebastian(){
         soTamano = 0;
-        soSimbolo1 = "*";
+        // soSimbolo1 = "*";
         soSimbolo2 = "-";
     }
 
@@ -16,12 +23,7 @@ public class OnaSebastian {
     public void setSoTamano(int soTamano) {
         this.soTamano = soTamano;
     }
-    public String getSoSimbolo1() {
-        return soSimbolo1;
-    }
-    public void setSoSimbolo1(String soSimbolo1) {
-        this.soSimbolo1 = soSimbolo1;
-    }
+    
     public String getSoSimbolo2() {
         return soSimbolo2;
     }
@@ -31,7 +33,7 @@ public class OnaSebastian {
 
     
 
-    public void soF1(int soTamano, String soSimbolo1){
+    public void soF1(int soTamano, Character soSimbolo1){
         System.out.println("F1: ");
         System.out.println();
         for(int i = 0; i < soTamano; i++){
@@ -49,7 +51,7 @@ public class OnaSebastian {
         System.out.println();
     }
 
-    public void soF2(int soTamano, String soSimbolo1, String soSimbolo2){
+    public void soF2(int soTamano, Character soSimbolo1, String soSimbolo2){
         System.out.println("F2: ");
         System.out.println();
         for(int i = 0; i < soTamano; i++){
@@ -71,7 +73,7 @@ public class OnaSebastian {
         System.out.println();
     }
 
-    public void soF3(int soTamano, String soSimbolo1){
+    public void soF3(int soTamano, Character soSimbolo1){
         System.out.println("F3: ");
         System.out.println();
         int i = 0;
@@ -84,7 +86,7 @@ public class OnaSebastian {
         }
     }
 
-    public void soF4(int soTamano, String soSimbolo1){
+    public void soF4(int soTamano, Character soSimbolo1){
         System.out.println();
         System.out.println("F4: ");
         System.out.println();
@@ -98,7 +100,7 @@ public class OnaSebastian {
     }
 
 
-    public void soF5(int SoTamano, String soSimbolo1){
+    public void soF5(int SoTamano, Character soSimbolo1){
         System.out.println("F5: ");
         System.out.println();
         int i = soTamano;
@@ -114,7 +116,7 @@ public class OnaSebastian {
         }
     }
 
-    public void soF6(int soTamano, String soSimbolo1){
+    public void soF6(int soTamano, Character soSimbolo1){
         System.out.println();
         System.out.println("F6: ");
         System.out.println();
@@ -131,7 +133,7 @@ public class OnaSebastian {
         }
     }
 
-    public void soF7(int soTamano, String soSimbolo1){ 
+    public void soF7(int soTamano, Character soSimbolo1){ 
         System.out.println();
         System.out.println("F7: ");
         System.out.println();
@@ -154,7 +156,7 @@ public class OnaSebastian {
         } 
     }
 
-    public void soF8(int soTamano, String soSimbolo1){
+    public void soF8(int soTamano, Character soSimbolo1){
         System.out.println();
         System.out.println("F8: ");
         System.out.println();

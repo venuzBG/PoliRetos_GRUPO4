@@ -12,7 +12,9 @@ public class VallejoAlexis {
     
     
     public void avSN9() {
-
+        System.out.println();
+        System.out.println("SN9: ");
+        System.out.println();
         int numeroActual = 2;
 
         while (numeroActual <= 128) {
@@ -21,6 +23,7 @@ public class VallejoAlexis {
 			System.out.print(", ");
             numeroActual = numeroActual * 2;
         }
+        System.out.println();
     }
 
     public void avSN10(){

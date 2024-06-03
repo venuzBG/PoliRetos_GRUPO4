@@ -30,7 +30,7 @@ public class App {
 
         
         int tamano = obtenerTamano();
-        String simbolo = obtenerSimbolo();
+        Character caracter = obtenerCaracter();
 
         System.out.println("-> Series Numericas:");
         System.out.println();
@@ -50,18 +50,20 @@ public class App {
             vaFig.avSN10();
             vaFig.avSN12();
                 
-        System.out.println("-> Series Caracteres :");
         System.out.println();
+        System.out.println("-> Series Caracteres :");
+        
         //caracteres 1-8
         trCaracteres.setSize(tamano);
+        trCaracteres.setTrChar(caracter);
         
-        trCaracteres.trSC1(trCaracteres.getSize());
-            trCaracteres.trSC2(trCaracteres.getSize());
-            trCaracteres.trSC3(trCaracteres.getSize());
-            trCaracteres.trSC4(trCaracteres.getSize());
+            trCaracteres.trSC1(trCaracteres.getSize(), trCaracteres.getTrChar());
+            trCaracteres.trSC2(trCaracteres.getSize(), trCaracteres.getTrChar());
+            trCaracteres.trSC3(trCaracteres.getSize(), trCaracteres.getTrChar());
+            trCaracteres.trSC4(trCaracteres.getSize(), trCaracteres.getTrChar());
             trCaracteres.trSC5(trCaracteres.getSize());
             trCaracteres.trSC6(trCaracteres.getSize());
-            trCaracteres.trSC7(trCaracteres.getSize());
+            trCaracteres.trSC7(trCaracteres.getSize(), trCaracteres.getTrChar());
             trCaracteres.trSC8(trCaracteres.getSize());
             trCaracteres.trSC9(trCaracteres.getSize());
             trCaracteres.trSC10(trCaracteres.getSize());
@@ -71,7 +73,7 @@ public class App {
         System.out.println();
         //figuras 1-8
         soFiguras.setSoTamano(tamano);
-        soFiguras.setSoSimbolo1(simbolo);
+        soFiguras.setSoSimbolo1(caracter);
         soFiguras.setSoSimbolo2("-");
 
             soFiguras.soF1(soFiguras.getSoTamano(), soFiguras.getSoSimbolo1());
@@ -85,6 +87,7 @@ public class App {
 
         //figuras 9-16
         ctFormas.setCtTamanio(tamano);
+        ctFormas.setCtChar(caracter);
             ctFormas.ctF9(ctFormas.getCtTamanio(),  ctFormas.getCtChar());
             ctFormas.ctF10(ctFormas.getCtTamanio(), ctFormas.getCtChar());
             ctFormas.ctF11(ctFormas.getCtTamanio(), ctFormas.getCtChar());
@@ -92,7 +95,7 @@ public class App {
             ctFormas.ctF13(ctFormas.getCtTamanio());
             ctFormas.ctF14(ctFormas.getCtTamanio());
             ctFormas.ctF15(ctFormas.getCtTamanio());
-            ctFormas.ctF16(ctFormas.getCtTamanio());
+            ctFormas.ctF16(ctFormas.getCtTamanio(), ctFormas.getCtChar());
 
         //figura17 vaFig
         vaFig.setVaNivel(tamano);
@@ -112,13 +115,14 @@ public class App {
         }
     }
 
-    private static String obtenerSimbolo() {
+    private static char obtenerCaracter() {
+        Scanner sc = new Scanner(System.in);
         while (true) {
             try {
-                System.out.print("Ingresa el símbolo deseado: ");
-                String simbolo = sc.next();
-                if (simbolo.length() == 1) {
-                    return simbolo;
+                System.out.print("Ingresa un carácter: ");
+                String input = sc.next();
+                if (input.length() == 1) {
+                    return input.charAt(0);
                 } else {
                     System.out.println("Error: Debes ingresar un solo carácter.");
                 }
@@ -128,6 +132,7 @@ public class App {
             }
         }
     }
+    
 
 }
 
