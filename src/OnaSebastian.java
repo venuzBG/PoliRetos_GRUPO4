@@ -13,7 +13,7 @@ public class OnaSebastian {
     }
     public OnaSebastian(){
         soTamano = 0;
-        // soSimbolo1 = "*";
+        soSimbolo1 ='+';
         soSimbolo2 = "-";
     }
 
@@ -143,7 +143,9 @@ public class OnaSebastian {
                 for (int j = 0; j < i; j++){
                     System.out.print("  ");
                 } 
-                    System.out.print(soSimbolo1+soSimbolo1+soSimbolo1);
+                for (int k = 0; k < 3; k++) {
+                    System.out.print(soSimbolo1); 
+                }
             }
             else{
                 for(int j = 1; j <= i; j++){
@@ -166,7 +168,9 @@ public class OnaSebastian {
                 for (int j = soTamano; j > i; j--) {
                     System.out.print("  ");
                 }
-                System.out.print(soSimbolo1+soSimbolo1+soSimbolo1);
+                for (int k = 0; k < 3; k++) {
+                    System.out.print(soSimbolo1); 
+                }
             }
             else{
                 for(int j = i; j < soTamano; j++){

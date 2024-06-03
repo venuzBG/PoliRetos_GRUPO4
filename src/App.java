@@ -5,16 +5,14 @@ import java.util.Scanner;
 public class App {
     public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
+        System.out.println();
         System.out.println("GRUPO NRO4");
         System.out.println("Integrantes: ");
         System.out.println("1. Sebastian Oña");
         System.out.println("2. Richard Tipantiza");
         System.out.println("3. Carlos Troya");
         System.out.println("4. Rommel Rivera");
-        
         System.out.println();
-        
-        
         
         OnaSebastian      soFiguras;
         TipantizaRichard  trCaracteres;
