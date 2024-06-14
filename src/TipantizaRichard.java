@@ -1,6 +1,24 @@
 public class TipantizaRichard {
     private int size;
     private Character trChar;
+    private String frase;
+    private String vocal;
+
+    public String getFrase(){
+        return frase;
+    }
+
+    public void setFrase(String frase){
+        this.frase = frase;
+    }
+
+    public String getVocal(){
+        return vocal;
+    }
+
+    public void setVocal(String vocal){
+        this.vocal = vocal;
+    }
 
     public Character getTrChar() {
         return trChar;
@@ -175,7 +193,31 @@ public class TipantizaRichard {
         System.out.print(" ");
     }
     System.out.println("");
-}
+    }
+
+    //Pedir una frase y una vocal, eliminar la vocal ingresada de la frase.
+    public void trC03(String frase, String vocal) {
+    System.out.println("\nC03:\n");
+        if (vocal.length() != 1 || !vocal.matches("[aeiouAEIOU]")) {
+            System.out.println("Error: Debes ingresar solo una vocal.");
+        } else {
+            String fraseSinVocal = frase.replaceAll("(?i)[" + vocal + "]", "").replaceAll("", " ").trim();
+
+            System.out.println("La frase sin la vocal '" + vocal + "' es: " + fraseSinVocal);
+        }
+    }
+
+    //Pedir una frase y presentarla invertida con las vocales en mayusculas.
+    public void trC05(String frase) {
+    System.out.println("\nC05:\n");
+    String fraseConVocalesMayusculas = frase.replaceAll("a", "A")
+                                            .replaceAll("e", "E")
+                                            .replaceAll("i", "I")
+                                            .replaceAll("o", "O")
+                                            .replaceAll("u", "U");
+    String fraseInvertida = new StringBuilder(fraseConVocalesMayusculas).reverse().toString();
+    System.out.println("Frase invrtida y vocales mayusculas: " + fraseInvertida);
+    }
 
     // // Métodos auxiliares
     private boolean esPrimo(int numero) {

@@ -27,8 +27,11 @@ public class App {
         vaFig        = new VallejoAlexis();
 
         
-        int tamano = obtenerTamano();
-        Character caracter = obtenerCaracter();
+        int tamano          = obtenerTamano();
+        Character caracter  = obtenerCaracter();
+        String frase        = obtenerFrase();
+        String vocal        = obtenerVocal();
+        
 
         System.out.println("-> Series Numericas:");
         System.out.println();
@@ -54,6 +57,8 @@ public class App {
         //caracteres 1-8
         trCaracteres.setSize(tamano);
         trCaracteres.setTrChar(caracter);
+        trCaracteres.setFrase(frase);
+        trCaracteres.setVocal(vocal);
         
             trCaracteres.trSC1(trCaracteres.getSize(), trCaracteres.getTrChar());
             trCaracteres.trSC2(trCaracteres.getSize(), trCaracteres.getTrChar());
@@ -65,6 +70,8 @@ public class App {
             trCaracteres.trSC8(trCaracteres.getSize());
             trCaracteres.trSC9(trCaracteres.getSize());
             trCaracteres.trSC10(trCaracteres.getSize());
+            trCaracteres.trC03(trCaracteres.getFrase(), trCaracteres.getVocal());
+            trCaracteres.trC05(trCaracteres.getFrase());
             System.out.println();
 
         System.out.println("-> Figuras:");
@@ -109,6 +116,37 @@ public class App {
             } catch (InputMismatchException e) {
                 System.out.println("Error: Debes ingresar un número válido.");
                 sc.nextLine(); // Limpia el búfer de entrada
+            }
+        }
+    }
+
+    private static String obtenerFrase() {
+    Scanner sc = new Scanner(System.in);
+        while (true) {
+            System.out.print("Ingresa una frase: ");
+            String input = sc.nextLine();
+            if (input.matches("[a-zA-Z ]+")) {
+                return input;
+            } else {
+                System.out.println("Error: Debes ingresar solo letras.");
+            }
+        }
+    }
+
+    private static String obtenerVocal() {
+    Scanner sc = new Scanner(System.in);
+        while (true) {
+            try {
+                System.out.print("Ingresa una vocal: ");
+                String input = sc.next();
+                if (input.matches("[aeiouAEIOU]") && input.length() == 1) {
+                    return input; 
+                } else {
+                    System.out.println("Error: Debes ingresar una sola vocal (a, e, i, o, u).");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Error: Debes ingresar una vocal válida.");
+                sc.nextLine(); 
             }
         }
     }
