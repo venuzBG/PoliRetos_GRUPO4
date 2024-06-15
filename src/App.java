@@ -4,16 +4,19 @@ import java.util.Scanner;
      * @version: 1.0
      * 
      */
+
+import javax.sql.rowset.spi.SyncResolver;
 public class App {
     static Scanner leer = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
+        System.out.println("");
+        
+        System.out.println("GRUPO 4");
+        System.out.println("troya.carlos");
         
         int ctTamanio = ingresoDatoTamanio();
         char ctChar = ingresoDatoCaracter();
         
-        System.out.println("GRUPO 4");
-        System.out.println("troya.carlos");
-
         TroyaCarlos ctFormas = new TroyaCarlos(ctTamanio, ctChar);
 
         ctFormas.ctF9(ctFormas.getCtTamanio(), ctFormas.getCtChar());
@@ -24,8 +27,15 @@ public class App {
         ctFormas.ctF14(ctFormas.getCtTamanio());
         ctFormas.ctF15(ctFormas.getCtTamanio());
         ctFormas.ctF16(ctFormas.getCtTamanio());
-        
-    }
+        ctFormas.ctC01();
+        ctFormas.ctC02();
+        ctFormas.ctA02(ctFormas.getCtTamanio(),ctFormas.getCtChar());
+        ctFormas.ctL01();
+        ctFormas.ctL02(ctFormas.getCtChar());
+        ctFormas.ctL03(ctFormas.getCtChar());
+        System.out.println("\n R01: El factorial de "+ctFormas.getCtTamanio() 
+                            +" es: "+ctFormas.ctR01(ctFormas.getCtTamanio()));
+    }  
     private static char ingresoDatoCaracter() {
         Character ctChar='0';
         String ctEntrada;
