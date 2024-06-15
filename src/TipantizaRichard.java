@@ -3,6 +3,9 @@ public class TipantizaRichard {
     private Character trChar;
     private String frase;
     private String vocal;
+    private String trNombre;
+    private String trApellido;
+
 
     public String getFrase(){
         return frase;
@@ -10,6 +13,20 @@ public class TipantizaRichard {
 
     public void setFrase(String frase){
         this.frase = frase;
+    }
+    public String gettrNombre(){
+        return trNombre;
+    }
+
+    public void settrNombre(String trNombre){
+        this.trNombre = trNombre;
+    }
+    public String gettrApellido(){
+        return trApellido;
+    }
+
+    public void settrApellido(String trApellido){
+        this.trApellido = trApellido;
     }
 
     public String getVocal(){
@@ -219,7 +236,109 @@ public class TipantizaRichard {
     System.out.println("Frase invrtida y vocales mayusculas: " + fraseInvertida);
     }
 
+    //Crear una matriz donde forme una X con su nombre y apellido
+    public void trA04(String trNombre, String trApellido) {
+    System.out.println("\nA04:\n");
+    int trtamano = Math.max(trNombre.length(), trApellido.length());
+    char[][] trmatriz = new char[trtamano][trtamano];
+
+        for (int i = 0; i < trtamano; i++) {
+            for (int j = 0; j < trtamano; j++) {
+                trmatriz[i][j] = ' ';
+            }
+        }
+        for (int i = 0; i < trtamano; i++) {
+            if (i < trNombre.length()) {
+                trmatriz[i][i] = trNombre.charAt(i);
+            }
+            if (i < trApellido.length()) {
+                trmatriz[i][trtamano - 1 - i] = trApellido.charAt(i);
+            }
+        }
+        for (int i = 0; i < trtamano; i++) {
+            for (int j = 0; j < trtamano; j++) {
+                System.out.print(trmatriz[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+    //Pedir el nombre y apellido y realizar la trCarga mostrando letra a letra hasta el 100 %.
+    public void trL08(String nombre, String apellido) {
+    System.out.println("\nL08:\n");
+    String trNombreCompleto = nombre + " " + apellido;
+    int trTotalCaracteres = trNombreCompleto.length();
+    StringBuilder trCarga = new StringBuilder("[");
+
+        for (int i = 0; i < trTotalCaracteres; i++) {
+            trCarga.append(" ");
+        }
+        trCarga.append("]");
+        for (int i = 0; i < trTotalCaracteres; i++) {
+            trCarga.setCharAt(i + 1, trNombreCompleto.charAt(i)); 
+            int porcentaje = (i + 1) * 100 / trTotalCaracteres;
+            System.out.print("\r" + trCarga.toString() + " " + porcentaje + "%");
+            try {
+                Thread.sleep(300); 
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println(); 
+    }
+
+    //Desplazar la figura a la derecha y regresar
+    public void trL12(int size) {
+    System.out.println("\nL12:\n");
+    String trdibujo = "\n \\ | | | /"+"\n  (>   <)"+"\noo0-(_)-0oo"; 
+    int trtiempo = 200; 
+
+    String[] trLineasDibujo = trdibujo.split("\n");
+    StringBuilder[] lineas = new StringBuilder[trLineasDibujo.length];
+        for (int i = 0; i < trLineasDibujo.length; i++) {
+            lineas[i] = new StringBuilder(" ".repeat(size + trLineasDibujo[i].length()));
+        }
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < trLineasDibujo.length; j++) {
+                lineas[j].replace(i, i + trLineasDibujo[j].length(), trLineasDibujo[j]);
+            }
+            imprimirLineas(lineas);
+            try {
+                Thread.sleep(trtiempo);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            for (int j = 0; j < trLineasDibujo.length; j++) {
+                lineas[j].replace(i, i + trLineasDibujo[j].length(), " ".repeat(trLineasDibujo[j].length()));
+            }
+        }
+        for (int i = size - 1; i >= 0; i--) {
+            for (int j = 0; j < trLineasDibujo.length; j++) {
+                lineas[j].replace(i, i + trLineasDibujo[j].length(), trLineasDibujo[j]);
+            }
+            imprimirLineas(lineas);
+            try {
+                Thread.sleep(trtiempo);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            for (int j = 0; j < trLineasDibujo.length; j++) {
+                lineas[j].replace(i, i + trLineasDibujo[j].length(), " ".repeat(trLineasDibujo[j].length()));
+            }
+        }
+    }
+
+    
+
+
     // // Métodos auxiliares
+    private void imprimirLineas(StringBuilder[] lineas) {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+        for (StringBuilder linea : lineas) {
+            System.out.println(linea);
+        }
+    }
     private boolean esPrimo(int numero) {
         if (numero <= 1) {
             return false;

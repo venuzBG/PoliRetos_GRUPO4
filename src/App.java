@@ -31,7 +31,8 @@ public class App {
         Character caracter  = obtenerCaracter();
         String frase        = obtenerFrase();
         String vocal        = obtenerVocal();
-        
+        String trNombre     = obtenerNombre();
+        String trApellido   = obtenerApellido();
 
         System.out.println("-> Series Numericas:");
         System.out.println();
@@ -59,6 +60,9 @@ public class App {
         trCaracteres.setTrChar(caracter);
         trCaracteres.setFrase(frase);
         trCaracteres.setVocal(vocal);
+        trCaracteres.settrNombre(trNombre);
+        trCaracteres.settrApellido(trApellido);
+
         
             trCaracteres.trSC1(trCaracteres.getSize(), trCaracteres.getTrChar());
             trCaracteres.trSC2(trCaracteres.getSize(), trCaracteres.getTrChar());
@@ -72,6 +76,9 @@ public class App {
             trCaracteres.trSC10(trCaracteres.getSize());
             trCaracteres.trC03(trCaracteres.getFrase(), trCaracteres.getVocal());
             trCaracteres.trC05(trCaracteres.getFrase());
+            trCaracteres.trA04(trCaracteres.gettrNombre(), trCaracteres.gettrApellido());
+            trCaracteres.trL08(trCaracteres.gettrNombre(), trCaracteres.gettrApellido());
+            trCaracteres.trL12(trCaracteres.getSize());
             System.out.println();
 
         System.out.println("-> Figuras:");
@@ -132,6 +139,32 @@ public class App {
             }
         }
     }
+
+    private static String obtenerNombre() {
+    Scanner sc = new Scanner(System.in);
+        while (true) {
+            System.out.print("Ingresa un nombre: ");
+            String input = sc.nextLine();
+            if (input.matches("[a-zA-Z ]+")) {
+                return input;
+            } else {
+                System.out.println("Error: Debes ingresar solo letras.");
+            }
+        }
+    }
+    private static String obtenerApellido() {
+    Scanner sc = new Scanner(System.in);
+        while (true) {
+            System.out.print("Ingresa un apellido: ");
+            String input = sc.nextLine();
+            if (input.matches("[a-zA-Z ]+")) {
+                return input;
+            } else {
+                System.out.println("Error: Debes ingresar solo letras.");
+            }
+        }
+    }
+
 
     private static String obtenerVocal() {
     Scanner sc = new Scanner(System.in);
