@@ -15,6 +15,14 @@ public class App {
         e1.rrSN3();    
         e1.rrSN2();
         e1.rrSN1();
+        e1.rrC04();
+        e1.rrC08();
+        e1.rrC09();
+
+        e1.rrA05("RommelRivera");
+        e1.rrL04();
+        e1.rrR03(5,6);
+
     }
 
     
