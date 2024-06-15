@@ -27,8 +27,10 @@ public class App {
         vaFig        = new VallejoAlexis();
 
         
-        int tamano = obtenerTamano();
+        int       tamano   = obtenerTamano();
         Character caracter = obtenerCaracter();
+        String    Cadena   = setSoCadena();
+        String    letra    = ingresarConsonante();
 
         System.out.println("-> Series Numericas:");
         System.out.println();
@@ -97,7 +99,33 @@ public class App {
 
         //figura17 vaFig
         vaFig.setVaNivel(tamano);
-            vaFig.avF17(vaFig.getVaNivel());
+        vaFig.avF17(vaFig.getVaNivel());
+
+
+        System.out.println("SEGUNDA PARTE DE LOS POLIRETOS: ");
+        System.out.println();
+        System.out.println("---> Cadena de caracteres : ");
+
+        soFiguras.setSoCadena(Cadena);
+        soFiguras.setSoLetra(letra);
+
+        soFiguras.sofraseInvertidaLetras  (soFiguras.getSoCadena());
+        soFiguras.sofraseInvertidasinLetra(soFiguras.getSoCadena(), soFiguras.getSoLetra());
+
+
+        System.out.println("---> Arrays: ");
+        System.out.println();
+
+        soFiguras.soPorcentajeCarga();
+        soFiguras.soplanoCartesiano(soFiguras.getSoCadena());
+
+        System.out.println();
+        System.out.println("---> Loading: ");
+        System.out.println();
+
+        soFiguras.soefectoCarga();
+        soFiguras.sobarramoviendose();
+        soFiguras.socambiaflecha();
 
     }
 
@@ -130,6 +158,43 @@ public class App {
             }
         }
     }
+
+    public static String setSoCadena() {
+        Scanner scanner = new Scanner(System.in);
+        String cadena;
+    
+        while (true) {
+            System.out.print("Ingrese una cadena de solo letras: ");
+            cadena = scanner.nextLine();
+    
+            if (cadena.matches("[a-zA-Z]+")) {
+                break;
+            } else {
+                System.out.println("Error: La cadena debe contener solo letras.");
+            }
+        }
+    
+        return cadena;
+    }
+
+    public static String ingresarConsonante() {
+        Scanner scanner = new Scanner(System.in);
+        String entrada;
+    
+        while (true) {
+            System.out.print("Ingrese una sola consonante: ");
+            entrada = scanner.nextLine();
+    
+            if (entrada.matches("[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]") && entrada.length() == 1) {
+                break;
+            } else {
+                System.out.println("Error: Debe ingresar una sola consonante.");
+            }
+        }
+    
+        return entrada;
+    }
+    
     
 
 }
