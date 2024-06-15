@@ -5,7 +5,7 @@ import java.util.Scanner;
      * 
      */
 
-import javax.sql.rowset.spi.SyncResolver;
+
 public class App {
     static Scanner leer = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
