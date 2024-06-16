@@ -108,17 +108,19 @@ public class App {
         
         soFiguras.setSoCadena(Cadena);
         soFiguras.setSoLetra(letra);
-
+        
         soFiguras.sofraseInvertidaLetras  (soFiguras.getSoCadena());
         soFiguras.sofraseInvertidasinLetra(soFiguras.getSoCadena(), soFiguras.getSoLetra());
-
+        ctFormas.ctC01();
+        ctFormas.ctC02();
 
         System.out.println("---> Arrays: ");
         System.out.println();
 
         soFiguras.soPorcentajeCarga();
         soFiguras.soplanoCartesiano(soFiguras.getSoCadena());
-
+        ctFormas.ctA02(ctFormas.getCtTamanio(),ctFormas.getCtChar());
+        
         System.out.println();
         System.out.println("---> Loading: ");
         System.out.println();
@@ -126,7 +128,16 @@ public class App {
         soFiguras.soefectoCarga();
         soFiguras.sobarramoviendose();
         soFiguras.socambiaflecha();
-
+        ctFormas.ctL01();
+        ctFormas.ctL02(ctFormas.getCtChar());
+        ctFormas.ctL03(ctFormas.getCtChar());
+        
+        System.out.println();
+        System.out.println("---> Recursividad: ");
+        System.out.println();
+    
+        System.out.println("\n R01: El factorial de "+ctFormas.getCtTamanio() 
+                            +" es: "+ctFormas.ctR01(ctFormas.getCtTamanio()));
     }
 
     private static int obtenerTamano() {
