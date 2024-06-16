@@ -1,6 +1,14 @@
 public class RommelRivera {
     
     private int rmRepeticiones;
+    private String rmCadena;
+    public String getRmCadena() {
+        return rmCadena;
+    }
+    public void setRmCadena(String rmCadena) {
+        this.rmCadena = rmCadena;
+    }
+
     
     public int getRmRepeticiones() {
         return rmRepeticiones;
@@ -128,6 +136,54 @@ public class RommelRivera {
         }
         System.out.println();
     }
+
+    public void rrC04() {
+        
+        System.out.print("Ingresa una frase:");
+        String frase = sc.nextLine();
+        System.out.print("Ingresa una letra a eliminar:");
+        char letraEliminar = sc.next().charAt(0);
+        String fraseSinLetra = frase.replace(String.valueOf(letraEliminar), " ");
+        System.out.println("Frase resultante: " + fraseSinLetra);
+    }
+
+    public void rrC08() {
+        
+        String[] conjunto = { "delira", "lidera", "ballena", "llenaba", "alondra", "ladrona", "España", "apañes",
+                "Enrique", "quieren" };
+        int indicePalabra = (int) (Math.random() * 10);
+        String anagrama, anagramaCorrecto;
+        System.out
+                .println("Juguemos a los anagramas, tendras 3 intentos. Esta es tu palabra: " + conjunto[indicePalabra]);
+        if (indicePalabra % 2 == 0) {
+            anagramaCorrecto = conjunto[indicePalabra + 1];
+        } else {
+            anagramaCorrecto = conjunto[indicePalabra - 1];
+        }
+        for (int i = 0; i < 3; i++) {
+            System.out.print("Ingresa tu anagrama: ");
+            anagrama = sc.nextLine();
+            if (anagramaCorrecto.equalsIgnoreCase(anagrama)) {
+                System.out.println("Bien hecho, tu anagrama es correcto");
+                break;
+            } else {
+                System.out.println("Lo siento, no esta bien");
+            }
+            System.out.println((i==2&&!anagramaCorrecto.equalsIgnoreCase(anagrama))?"Se te acabaron las opportunidades, el anagrama era: "+anagramaCorrecto:" ");
+        }
+        
+    }
+
+    public void rrC09() {
+        
+        System.out.print("[ Cad. 9 ]- Ingresa una frase: ");
+        String frase = sc.nextLine();
+
+        String cambio = LetrasAlternantes(frase);
+        System.out.println("Frase resultante: " + cambio);
+
+    }
+
     
 }
 

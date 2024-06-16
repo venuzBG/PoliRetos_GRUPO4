@@ -95,7 +95,7 @@ public class App {
             ctFormas.ctF13(ctFormas.getCtTamanio());
             ctFormas.ctF14(ctFormas.getCtTamanio());
             ctFormas.ctF15(ctFormas.getCtTamanio());
-            ctFormas.ctF16(ctFormas.getCtTamanio(), ctFormas.getCtChar());
+            ctFormas.ctF16(ctFormas.getCtTamanio());
 
         //figura17 vaFig
         vaFig.setVaNivel(tamano);
@@ -105,14 +105,21 @@ public class App {
         System.out.println("SEGUNDA PARTE DE LOS POLIRETOS: ");
         System.out.println();
         System.out.println("---> Cadena de caracteres : ");
-        
+
+        ctFormas.ctC01();
+        ctFormas.ctC02();
+
+        trCaracteres.setFrase(Cadena);
+        trCaracteres.setVocal(letra);
+        trCaracteres.trC03(trCaracteres.getFrase(),trCaracteres.getVocal());
+        trCaracteres.trA04(trCaracteres.getFrase());
+        trCaracteres.trC05(trCaracteres.getFrase());
+
         soFiguras.setSoCadena(Cadena);
         soFiguras.setSoLetra(letra);
         
         soFiguras.sofraseInvertidaLetras  (soFiguras.getSoCadena());
         soFiguras.sofraseInvertidasinLetra(soFiguras.getSoCadena(), soFiguras.getSoLetra());
-        ctFormas.ctC01();
-        ctFormas.ctC02();
 
         System.out.println("---> Arrays: ");
         System.out.println();
@@ -125,12 +132,15 @@ public class App {
         System.out.println("---> Loading: ");
         System.out.println();
 
-        soFiguras.soefectoCarga();
-        soFiguras.sobarramoviendose();
-        soFiguras.socambiaflecha();
         ctFormas.ctL01();
         ctFormas.ctL02(ctFormas.getCtChar());
         ctFormas.ctL03(ctFormas.getCtChar());
+        soFiguras.soefectoCarga();
+        soFiguras.sobarramoviendose();
+        soFiguras.socambiaflecha();
+
+        trCaracteres.trL08(trCaracteres.getFrase());
+        trCaracteres.trL12(trCaracteres.getSize());
         
         System.out.println();
         System.out.println("---> Recursividad: ");
