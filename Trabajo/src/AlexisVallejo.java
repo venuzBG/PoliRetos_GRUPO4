@@ -54,4 +54,46 @@ public class AlexisVallejo {
             System.out.println();
         }
     }
+
+    public void avR03 (int a, int b) {
+        int result = multiplicacion(a, b);
+        System.out.println(a + " * " + b + " = " + result);
+    }
+
+    public static int multiplicacion(int a, int b) {
+        if (b < 0) {
+            return -multiplicacion(a, -b);
+        }
+        if (b == 0) {
+            return 0;
+        }
+        return a + multiplicacion(a, b - 1);
+    }
+
+    public void avR04(int a, int b) {
+        int result = potencia(a, b);
+        System.out.println(a + " ^ " + b + " = " + result);
+    }
+
+    public static int potencia(int a, int b) {
+        if (b == 0) {
+            return 1;
+        }
+        if (b < 0) {
+            return 1 / potencia(a, -b);
+        }
+        return a * potencia(a, b - 1);
+    }
+
+    public void avR06(int n) {
+        conteoRegresivo(n);
+    }
+
+    public static void conteoRegresivo(int n) {
+        if (n < 0) {
+            return;
+        }
+        System.out.println(n);
+        conteoRegresivo(n - 1);
+    }
 }    
