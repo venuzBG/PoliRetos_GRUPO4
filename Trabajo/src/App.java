@@ -12,5 +12,11 @@ public class App {
         av.avSN12();
         System.out.println();
         av.avF17();
+        System.out.println();
+        av.avR03(5,6);
+        System.out.println();
+        av.avR04(5,6);
+        System.out.println();
+        av.avR06(5);
     }
 }
