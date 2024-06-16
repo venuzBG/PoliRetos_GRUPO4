@@ -105,7 +105,7 @@ public class App {
         System.out.println("SEGUNDA PARTE DE LOS POLIRETOS: ");
         System.out.println();
         System.out.println("---> Cadena de caracteres : ");
-
+        
         soFiguras.setSoCadena(Cadena);
         soFiguras.setSoLetra(letra);
 

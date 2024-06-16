@@ -197,4 +197,16 @@ public class TipantizaRichard {
         }
         return result.toString();
     }
+
+    //Pedir una frase y una vocal, eliminar la vocal ingresada de la frase.
+    public void trC03(String frase, String vocal) {
+        System.out.println("\nC03:\n");
+            if (vocal.length() != 1 || !vocal.matches("[aeiouAEIOU]")) {
+                System.out.println("Error: Debes ingresar solo una vocal.");
+            } else {
+                String fraseSinVocal = frase.replaceAll("(?i)[" + vocal + "]", "").replaceAll("", " ").trim();
+    
+                System.out.println("La frase sin la vocal '" + vocal + "' es: " + fraseSinVocal);
+            }
+        }
 }
