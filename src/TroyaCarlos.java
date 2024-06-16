@@ -325,7 +325,7 @@ public class TroyaCarlos {
         System.out.println("C01");
         System.out.println("");
         System.out.print("Ingrese una frase: ");
-        String ctFrase = App.leer.nextLine().toLowerCase();
+        String ctFrase = App.sc.nextLine().toLowerCase();
         int ctContador = 0;
         for (int i = 0; i < ctFrase.length(); i++) {
             if (ctFrase.charAt(i) == 'a' || ctFrase.charAt(i) == 'e' || ctFrase.charAt(i) == 'i'
@@ -339,7 +339,7 @@ public class TroyaCarlos {
         System.out.println("C02:");
         System.out.println("");
         System.out.println("Ingrese una frase :");
-        String ctFrase = App.leer.nextLine().replace(" ", "").toLowerCase();
+        String ctFrase = App.sc.nextLine().replace(" ", "").toLowerCase();
         int ctLetras = 0;
         for (int i = 0; i < ctFrase.length(); i++) {
             if ((ctFrase.charAt(i) >= 97 && ctFrase.charAt(i) <= 122)
@@ -401,7 +401,7 @@ public class TroyaCarlos {
         System.out.println("L01:");
         System.out.println("");
         System.out.print("Presione ENTER para empezar");
-        App.leer.nextLine();
+        App.sc.nextLine();
 
         char[] ctChar = { '-', '\\', '|', '/' };
         int ctPos = 0;
@@ -427,7 +427,7 @@ public class TroyaCarlos {
         System.out.println("L02:");
         System.out.println("");
         System.out.print("Presione ENTER para empezar");
-        App.leer.nextLine();
+        App.sc.nextLine();
 
         for (int i = 0; i <= 100; i++) {
             System.out.print("\r  [" + ctCarga.repeat((int) Math.round((double) i / 100.00 * ctLong))
@@ -450,7 +450,7 @@ public class TroyaCarlos {
         System.out.println("L03:");
         System.out.println("");
         System.out.print("Presione ENTER para empezar");
-        App.leer.nextLine();
+        App.sc.nextLine();
 
         for (int repeticiones = 0; repeticiones < 5; repeticiones++) {
             if (repeticiones % 2 == 0) {
